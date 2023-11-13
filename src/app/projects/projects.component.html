@@ -1,0 +1,39 @@
+<div class="row">
+    <div class="col-12 mb-2 text-end">
+        <button class="btn btn-outline-primary btn-sm">Create Project</button>
+    </div>
+    <div class="col-3" *ngFor="let project of projectList">
+        <div class="card">
+            <div class="card-header p-3 bg-success">
+                {{project.shortName}}
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">{{project.projectName}}</h5>
+                <h6 class="card-title">{{project.createdDate | date: 'dd-mm-yyyy'}}</h6>
+            </div>
+            <div class="card-footer text-body-secondary">
+                <button class="btn btn-outline-primary btn-sm">Edit</button>
+                <button class="btn btn-outline-primary btn-sm">Delete</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                ...
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
